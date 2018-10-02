@@ -1,8 +1,6 @@
 # Gif-e-mon
 project 2
 
-
-
 Home Page -
 
 Gather information on button clicks

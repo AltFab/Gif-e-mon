@@ -1,3 +1,26 @@
-.list-group-item {
-  line-height: 2.5;
+body {
+  background-image: url("../images/hole.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color:black;
+  backface-visibility: 0.8;
+}
+
+h1
+h3 {
+  color: white;
+}
+
+.build{
+  margin: 10px;
+
+}
+
+.optionBuild{
+  height: auto; 
+    width: auto; 
+    max-width: 200px; 
+    max-height: 200px;
+  
 }
