@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <title>Instructions Page</title>
+</head>
+<style>
+    #modal-id {
+        display: none;
+    }
+</style>
+
+<body>
+    <button id="modalBtn" class="button">Instructions</button>
+
+    <div class="modal active" id="modal-id">
+        <a href="#close" class="modal-overlay" aria-label="Close"></a>
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title h5">How to play to Gif-E-Mon!</div>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <p>OBJECTIVE</p>
+                    <p>Oh no! Evil gifs are trying to take over the internet! You must use your gif to defend the
+                        internet from total domination!</p>
+                    <p>BUTTONS</p>
+                    <p>Attack - use this button to attack your enemy Gif for attack power</p>
+                    <p>Defense - use this button to defend yourself from the enemy</p>
+                    <p>Potion - use this button to restore your gif's HP level</p>
+                    <p>SCORE SYSTEM</p>
+                    1. Attack enemy<br>
+                    -increase score based on the lose of HP of enemy gif<br>
+                    2. Kills enemy<br>
+                    - increase points by a static 20 points for each kill<br>
+                    3. Use none of your potions<br>
+                    - each round user remains with 3 potions give bonus points 5 points.<br>
+                    - if user has less than 3 potions no bonus points</p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="closeBtn">Close</button>
+            </div>
+        </div>
+</body>
+
+<script src= main.js></script>
+
+</html>
