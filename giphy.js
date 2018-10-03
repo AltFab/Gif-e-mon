@@ -34,10 +34,10 @@ $.ajax({
                 $(image).attr("data-state", "still");
             }
         });
-        $("end-turn").on("click", function(){
-            var state = $(image).attr("data-state");
+        $("#end-turn").on("click", function(){
+            var state2 = $(image).attr("data-state");
 
-            if (state === "animate"){
+            if (state2 === "animate"){
                 $(image).attr("src", $(image).attr("data-still"));
                 $(image).attr("data-state", "still");
             }
