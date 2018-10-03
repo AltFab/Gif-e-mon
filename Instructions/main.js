@@ -8,6 +8,14 @@ var closeBtn = document.getElementById('closeBtn');
 //Listen for click
 modalBtn.addEventListener('click', openModal);
 //Function to open modal
-function openModal (){
+function openModal() {
     modal.style.display = 'block';
 }
+
+//Listen for click
+closeBtn.addEventListener('click', closeModal);
+//Function to open modal
+function closeModal() {
+    modal.style.display = 'block';
+}
+
