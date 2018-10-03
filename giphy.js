@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 $("#random-button").on("click", function(){
 
-    var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg-13&tag=cartoon&offset=4999&limit=1";
+    var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg-13&tag=cartoon&offset=4999&limit=1&looping=2";
 
 $.ajax({
     url: queryURL,
@@ -33,7 +33,19 @@ $.ajax({
                 $(image).attr("src", $(image).attr("data-still"));
                 $(image).attr("data-state", "still");
             }
+        });
+        $("end-turn").on("click", function(){
+            var state = $(image).attr("data-state");
+
+            if (state === "animate"){
+                $(image).attr("src", $(image).attr("data-still"));
+                $(image).attr("data-state", "still");
+            }
+            else {
+                $(image).attr("src", $(image).attr("data-animate"));
+                $(image).attr("data-state", "animate");
+            }
+        })
     });
-});
 });
 });
