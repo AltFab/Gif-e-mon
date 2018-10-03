@@ -25,6 +25,7 @@
     }
 
     .modal {
+        display: none;
         position: fixed;
         z-index: inherit 1;
         left: 0;
@@ -43,13 +44,13 @@
         box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
     }
 
-    .closeBtn {
+    #closeBtn {
         float: right;
         font-size: 30px;
         color: #ccc;
     }
 
-    .closeBtn:hover,.closeBtn:focus{
+    #closeBtn:hover,#closeBtn:focus{
         color: #000;
         text-decoration: none;
         cursor: pointer;
@@ -61,7 +62,7 @@
 
     <div id="simpleModal" class="modal">
         <div class="modalContent">
-           <span class="closeBtn">&times</span> 
+           <span id="closeBtn">&times</span> 
            <p>OBJECTIVE</p>
            <p>Oh no! Evil gifs are trying to take over the internet! You must use your gif to defend the
                internet from total domination!</p>
