@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 $("#random-button").on("click", function(){
 
-    var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg-13&tag=cartoon+fighting&offset=4999&limit=1&looping=2";
+    var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg-13&tag=cartoon&offset=4999&limit=1&looping=2";
 
 $.ajax({
     url: queryURL,
