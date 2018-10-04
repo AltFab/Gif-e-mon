@@ -5,7 +5,7 @@ $(document).ready(function(){
 $("button#random-gif.btn.btn-primary").on("click", function(){
 // this method rotates to the next gif and removes the current one
     $("#gifs").empty();
-    var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg-13&tag=cartoon&offset=4999&limit=1&looping=2";
+    var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg-13&tag=cartoon";
 
 $.ajax({
     url: queryURL,
@@ -14,6 +14,7 @@ $.ajax({
     .then(function(response){
         
         var results = response.data;
+        console.log(response);
 
         var image = $("<img>");
 
@@ -21,7 +22,6 @@ $.ajax({
         image.attr("class", "item");
 // populates the gif
         $("#gifs").prepend(image);
-
         });
     });
 });
