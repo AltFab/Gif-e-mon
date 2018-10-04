@@ -24,3 +24,7 @@ h3 {
     max-height: 200px;
   
 }
+
+.column input[title="Attack the enemy!"] {
+  color:green;
+}
