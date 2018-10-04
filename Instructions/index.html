@@ -21,7 +21,7 @@
     }
 
     .button:hover {
-        background:darkcyan;
+        background: darkcyan;
     }
 
     .modal {
@@ -33,7 +33,7 @@
         height: 100%;
         width: 100%;
         overflow: auto;
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0, 0, 0, 0.2);
     }
 
     .modalContent {
@@ -41,7 +41,7 @@
         margin: 20% auto;
         padding: 20px;
         width: 70%;
-        box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     }
 
     #closeBtn {
@@ -50,7 +50,8 @@
         color: #ccc;
     }
 
-    #closeBtn:hover,#closeBtn:focus{
+    #closeBtn:hover,
+    #closeBtn:focus {
         color: #000;
         text-decoration: none;
         cursor: pointer;
@@ -60,8 +61,11 @@
         text-align: center;
     }
 
-    h1{
-        text-align:center;
+    h1 {
+        text-align: center;
+    }
+    img {
+        margin-top: 20px;
     }
 </style>
 
@@ -70,30 +74,29 @@
 
     <div id="simpleModal" class="modal">
         <div class="modalContent">
-           <span id="closeBtn">&times</span> 
-           <h1>How to play Gif-E-Mon!</h1>
-           <p>OBJECTIVE<img src="assets/warrior dude.gif" width="60" height="60" alt="guy"/></p>
-           <p>Oh no! Evil gifs are trying to take over the internet! You must use your gif to defend the
-               internet from total domination!</p>
-           <p>BUTTONS</p>
-           <p>Attack - use this button to attack your enemy Gif for attack power</p>
-           <p>Defense - use this button to defend yourself from the enemy</p>
-           <p>Potion - use this button to restore your gif's HP level</p>
-           <p>SCORE SYSTEM</p>
-           <p>1. Attack enemy<br>
-           -increase score based on the lose of HP of enemy gif<br>
-           2. Kills enemy<br>
-           - increase points by a static 20 points for each kill<br>
-           3. Use none of your potions<br>
-           - each round user remains with 3 potions give bonus points 5 points.<br>
-           - if user has less than 3 potions no bonus points</p>
-           <img src="assets/warrior dude.gif" width="80" height="80" alt="guy"/>
+            <span id="closeBtn">&times</span>
+            <h1>How to play Gif-E-Mon!<img src="assets/cat.gif" width="60" height="60" alt="guy" /></h1>
+            <p>OBJECTIVE</p>
+            <p>Oh no! Evil gifs are trying to take over the internet! You must use your gif to defend the
+                internet from total domination!</p>
+            <p>BUTTONS</p>
+            <p>Attack - use this button to attack your enemy Gif for attack power</p>
+            <p>Defense - use this button to defend yourself from the enemy</p>
+            <p>Potion - use this button to restore your gif's HP level</p>
+            <p>SCORE SYSTEM</p>
+            <p>1. Attack enemy<br>
+                -increase score based on the lose of HP of enemy gif<br>
+                2. Kills enemy<br>
+                - increase points by a static 20 points for each kill<br>
+                3. Use none of your potions<br>
+                - each round user remains with 3 potions give bonus points 5 points.<br>
+                - if user has less than 3 potions no bonus points
+            </p>
         </div>
-        
+
     </div>
 </body>
 
 <script src=main.js></script>
 
 </html>
-
