@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-$("#random-button").on("click", function(){
+$("button#random-gif.btn.btn-primary").on("click", function(){
 
     var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg-13&tag=cartoon&offset=4999&limit=1&looping=2";
 
