@@ -12,7 +12,7 @@ var enemyToon = {
         });
     },
     update:function(objColVals, condition, cb){
-        orm.update("gifbattles", objColVals, condition function(res){
+        orm.update("gifbattles", objColVals, condition, function(res){
             cb(res);
         });
     },

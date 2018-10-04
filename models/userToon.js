@@ -12,7 +12,7 @@ var userToon = {
         });
     },
     update:function(objColVals, condition, cb){
-        orm.update("gifedex", objColVals, condition function(res){
+        orm.update("gifedex", objColVals, condition, function(res){
             cb(res);
         });
     },
