@@ -2,12 +2,11 @@ DROP DATABASE IF EXISTS gifemon_db;
 CREATE DATABASE gifemon_db;
 
 USE gifemon_db;
-
+-- user info
 CREATE TABLE gifedex(
 	id INT AUTO_INCREMENT NOT NULL,
     user_name VARCHAR(50) NOT NULL,
 	score INT,
-    gif_name VARCHAR(200) NULL,
     gif_link VARCHAR (max) NOT NULL,
     health INT NOT NULL,
     attack INT NOT NULL,
@@ -15,7 +14,7 @@ CREATE TABLE gifedex(
     PRIMARY KEY(id)
 );
 
-
+-- enemy stats
 CREATE TABLE gifbattles(
 	id INT AUTO_INCREMENT NOT NULL,
     enemy_gif_name VARCHAR(200) NOT NULL,
