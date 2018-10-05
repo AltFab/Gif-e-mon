@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-    <link rel="stylesheet" href="../../giphy.css">
     <link rel="stylesheet" href="../styles/styles.css">
 
 </head>
@@ -26,7 +25,7 @@
             </div>
         </div>
     </div>
-    
+
     <br>
     <br>
 
@@ -37,7 +36,7 @@
             <div class="column col-6 float-right text-center">
                 <div class="card">
                     <div id="gifs">
-                        
+
                     </div>
                     <div class="card-header">
                         <div class="card-title h5">random gif</div>
@@ -62,7 +61,7 @@
                     <div class="input-group">
                         <span class="input-group-addon">Username</span>
                         <input id="username" type="text" class="form-input" placeholder="">
-                        
+
                     </div>
                 </div>
                 <br>
@@ -75,15 +74,18 @@
                 <div class="columns">
                     <!-- attack -->
                     <div class="column col-2 col-mx-auto text-center">
-                        <input class="buildButton" value="attack" type="image" src="../images/sword.png" width="60" height="60" alt="Attack">
+                        <input class="buildButton" value="attack" type="image" src="../images/sword.png" width="60"
+                            height="60" alt="Attack">
                     </div>
                     <!-- balance -->
                     <div class="column col-2 col-mx-auto text-center">
-                        <input  class="buildButton" value="balance" type="image" src="../images/balance2.png" width="60" height="60" alt="Balance">
+                        <input class="buildButton" value="balance" type="image" src="../images/balance2.png" width="60"
+                            height="60" alt="Balance">
                     </div>
                     <!-- defense -->
                     <div class="column col-2 col-mx-auto text-center">
-                        <input  class="buildButton" value="defense" type="image" src="../images/shiled2.png" width="60" height="60" alt="Shield">
+                        <input class="buildButton" value="defense" type="image" src="../images/shiled2.png" width="60"
+                            height="60" alt="Shield">
                     </div>
                 </div>
                 <br>
@@ -92,23 +94,67 @@
                 <br>
                 <div class="columns">
                     <div class="column col-6 col-mx-auto">
-                            <button class="btn btn-primary input-group-btn">Instructions</button>                            
+                        <button id="easy" class="btn btn-primary input-group-btn">Instructions</button>
                     </div>
                     <div class="column col-6 col-mx-auto">
-                            <button id="start" class="btn btn-primary input-group-btn">Start Game</button>                            
+                        <button id="start" class="btn btn-primary input-group-btn">Start Game</button>
                     </div>
-                
-                
 
 
+
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- test area -->
+        <div class="modal" id="modal-id">
+            
+            <div class="modal-container">
+                <div class="modal-header">
+                    <a id="close" href="#close" class="btn btn-clear float-right" aria-label="Close"></a>
+                    <div class="modal-title">
+                        <div class="columns">
+                            <div class="column">
+                                <h5>How to play Gif-E-Mon! <img class="img-responsive float-right" src="../images/cat.gif"
+                                        width="80" height="80" alt="guy" /></h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- insturction modals -->
+                <div class="modal-body">
+                    <div class="content">
+
+                        <p>OBJECTIVE</p>
+                        <p>Oh no! Evil gifs are trying to take over the internet! You must use your gif to defend the
+                            internet from total domination!</p>
+                        <p>BUTTONS</p>
+                        <p>Attack - use this button to attack your enemy Gif for attack power</p>
+                        <p>Defense - use this button to defend yourself from the enemy</p>
+                        <p>Potion - use this button to restore your gif's HP level</p>
+                        <p>SCORE SYSTEM</p>
+                        <p>1. Attack enemy<br>
+                            -increase score based on the lose of HP of enemy gif<br>
+                            2. Kills enemy<br>
+                            - increase points by a static 20 points for each kill<br>
+                            3. Use none of your potions<br>
+                            - each round user remains with 3 potions give bonus points 5 points.<br>
+                            - if user has less than 3 potions no bonus points
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <img class="img-responsive float-right" src="../images/warrior dude.gif" width="80" height="80" alt="guy" />
+
+                </div>
             </div>
         </div>
-
-
-    </div>
-    
 
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="../../giphy.js"></script>
+
 </html>

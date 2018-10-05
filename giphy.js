@@ -1,5 +1,16 @@
 // initialize jquery
 $(document).ready(function () {
+    
+    $("#easy").on("click", function(){
+        console.log("click modal");
+        $("#modal-id").addClass("active");
+    });
+    $("#close").on("click", function(){
+        console.log("close modal");
+        $("#modal-id").removeClass("active");
+    });
+    
+
     var randoGif = {
         gif_link: "",
         user_name: "",
@@ -44,7 +55,7 @@ $(document).ready(function () {
                 randoGif.attack = 6;
                 randoGif.health = randoGif.health + 4;}
                 break;
-            case "defend":{
+            case "defense":{
                 randoGif.attack = 4;
                 randoGif.health = randoGif.health + 6;}
                 break;
