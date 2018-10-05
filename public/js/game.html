@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="../../giphy.css">
     <link rel="stylesheet" href="../styles/styles.css">
 
 </head>
@@ -37,8 +38,8 @@
         <div class="column">
             <div class="column col-mx-auto battleboard">
                 <div class="card">
-                    <div class="card-image">
-                        <img src="../images/watermelon.webp" class="img-responsive">
+                    <div id="gifs">
+
                     </div>
                     <div class="card-header">
                         <div class="card-title h5">User Gif</div>
@@ -66,7 +67,7 @@
                     <div class="panel-header">
                         <div class="panel-title text-center">Battle Log</div>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body" id="battelog">
                         stuff about the battle.
                         gif 1 attacks gif 2
                         gif 2 fainted.
@@ -154,5 +155,7 @@
     <br>
 
 </body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../giphy.js"></script>
 
 </html>
