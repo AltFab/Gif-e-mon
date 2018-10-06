@@ -27,6 +27,9 @@ h3 {
   
 }
 
+#gifs{
+  width: auto;
+}
 battleboard{
   margin-left: 0px !important;
   margin-right: 0px !important;
