@@ -108,3 +108,11 @@ battleboard{
   background-color:white;
   
 }
+img#melon-bye.img-responsive{
+  width: 353px;
+  height: 290px;
+}
+img.animated-gif{
+  width: 353px;
+  height: 290px;
+}
