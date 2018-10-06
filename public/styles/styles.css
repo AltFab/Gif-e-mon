@@ -42,10 +42,37 @@ battleboard{
   
 }
 img#melon-bye.img-responsive{
+  width: 351px;
+  height: 288px;
+}
+img.animated-gif{
+  width: 351px;
+  height: 288px;
+}
+img#bye-bye.img-responsive{
   width: 353px;
   height: 290px;
 }
-img.animated-gif{
+div#homeCard{
   width: 353px;
   height: 290px;
+}
+div#gameCard{
+  width: 353px;
+  height: 340px;
+}
+button#random-gif{
+  margin-top: 26px;
+}
+.bg-secondary{
+  width: 353px;
+  height: 340px;
+}
+div#scoreCard{
+  width:353px;
+  height: 340px;
+}
+img#scoreImg.img-responsive{
+  width: 353px;
+  height: 288px;
 }
