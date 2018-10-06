@@ -33,3 +33,67 @@ battleboard{
   margin-top: 10px;
   margin-bottom: 10px ;
 }
+
+.tooltip .tooltiptextA {
+  visibility: hidden;
+  width: 120px;
+  background-color: 	#6495ED;
+  color:white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptextA {
+  visibility: visible;
+}
+
+.tooltip .tooltiptextB {
+  visibility: hidden;
+  width: 120px;
+  background-color: 	#6495ED;
+  color:white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptextB {
+  visibility: visible;
+}
+
+.tooltip .tooltiptextS {
+  visibility: hidden;
+  width: 120px;
+  background-color: 	#6495ED;
+  color:white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptextS {
+  visibility: visible;
+}
+
+.tooltip .tooltiptextP {
+  visibility: hidden;
+  width: 120px;
+  background-color: 	#6495ED;
+  color:white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptextP {
+  visibility: visible;
+}
