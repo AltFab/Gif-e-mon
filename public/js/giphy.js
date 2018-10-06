@@ -1,15 +1,16 @@
 // initialize jquery
+
 $(document).ready(function () {
-    
-    $("#easy").on("click", function(){
+
+    $("#easy").on("click", function () {
         console.log("click modal");
         $("#modal-id").addClass("active");
     });
-    $("#close").on("click", function(){
+    $("#close").on("click", function () {
         console.log("close modal");
         $("#modal-id").removeClass("active");
     });
-    
+
 
     var randoGif = {
         gif_link: "",
@@ -50,19 +51,22 @@ $(document).ready(function () {
     $(".buildButton").on("click", function () {
         var buildChosen = $(this).val()
         console.log(buildChosen)
-        console.log(typeof(buildChosen))
+        console.log(typeof (buildChosen))
         switch (buildChosen) {
-            case "attack":{
+            case "attack": {
                 randoGif.attack = 6;
-                randoGif.health = randoGif.health + 4;}
+                randoGif.health = randoGif.health + 4;
+            }
                 break;
-            case "defense":{
+            case "defense": {
                 randoGif.attack = 4;
-                randoGif.health = randoGif.health + 6;}
+                randoGif.health = randoGif.health + 6;
+            }
                 break;
-            case "balance":{
+            case "balance": {
                 randoGif.attack = 5;
-                randoGif.health = randoGif.health + 5;}
+                randoGif.health = randoGif.health + 5;
+            }
                 break;
         }
 
@@ -75,5 +79,14 @@ $(document).ready(function () {
         //send to mysql  randoGif
         console.log("gif stats modified")
         console.log(randoGif);
+
+        createUser(randoGif);
+
+
+        
+
     });
-});
+    function createUser(randoGif) {
+        $.post("/api/posts/", randoGif, function () {
+          window.location.href = "/blog";
+        });
