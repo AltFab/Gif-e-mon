@@ -27,6 +27,9 @@ h3 {
   
 }
 
+#gifs{
+  width: auto;
+}
 battleboard{
   margin-left: 0px !important;
   margin-right: 0px !important;
@@ -96,4 +99,12 @@ battleboard{
 
 .tooltip:hover .tooltiptextP {
   visibility: visible;
+}
+
+#chart{
+  width: auto;
+  padding: 10px;
+  margin-top: 30px;
+  background-color:white;
+  
 }
