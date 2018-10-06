@@ -65,11 +65,7 @@ $(document).ready(function() {
   }); //end reload
 
   function gameOver() {
-    if (playerHealth <= 0 && enemyHealth <= 0) {
-      $("#combat3").empty().append("It's a draw... but you still died. Nothing personnel, kid.");
-      $("#attackButton,#defenseButton,#potionButton").hide();
-      $("#combat4").show();
-    } else if (playerHealth <= 0) {
+    if (playerHealth <= 0) {
       $("#combat3").empty().append("You Lose! Game Over!");
       $("#attackButton,#defenseButton,#potionButton").hide();
       $("#combat4").show();
