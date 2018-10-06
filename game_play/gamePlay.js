@@ -14,7 +14,6 @@ $(document).ready(function () {
     
 });
 
-
 //user clicks button calls operations.
 $("#actionButton").on("click", function () {
     var actionChosen = $(this).val()
@@ -42,7 +41,7 @@ function attack() {
         score = score + critDamage;
 
         //update damage of enemy
-        
+
         //display battlelog info
         $("#battlelog").empty().append("Critical Stike! You hit for " + critDamage + " damage!");
         enemy_hp -= critDamage;
