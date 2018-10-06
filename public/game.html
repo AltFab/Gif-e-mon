@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-    <link rel="stylesheet" href="../../giphy.css">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
 </head>
 
@@ -69,7 +68,7 @@
                     <div class="panel-header">
                         <div class="panel-title text-center">Battle Log</div>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body" id="battelog">
                         stuff about the battle.
                         gif 1 attacks gif 2
                         gif 2 fainted.
@@ -128,22 +127,22 @@
         <div class="column">
             <div class="column col-2 col-lg-<1-12>"></div>
         </div>
-        <!-- attack -->
+        <!-- Attack -->
         <div class="column">
-            <div class="column col-2 col-mx-auto text-center">
-                <input type="image" src="../images/sword.png" width="60" height="60" title="Attack the enemy!" alt="Attack">
+            <div  class="column col-2 col-mx-auto text-center">
+                <input id="actionButton" value="attack" type="image" id="attackButton" src="images/sword.png" width="60" height="60" alt="Attack">
             </div>
         </div>
         <!-- Defend -->
         <div class="column">
             <div class="column col-2 col-mx-auto text-center">
-                <input type="image" src="../images/shiled2.png" width="60" height="60" title="Defend yourself!" alt="defend">
+                <input id="actionButton" value="defend" type="image" id="defenseButton" src="images/shiled2.png" width="60" height="60" alt="defend">
             </div>
         </div>
         <!-- Potion -->
         <div class="column">
             <div class="column col-2 col-mx-auto text-center">
-                <input type="image" src="../images/potion.png" width="60" height="60" title="Potions for your health!" alt="heal">
+                <input id="actionButton" value="potion" type="image" id="potionButton" src="images/potion.png" width="60" height="60" alt="heal">
             </div>
         </div>
         <div class="column">
@@ -158,6 +157,6 @@
 
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script type="text/javascript" src="../../giphy.js"></script>
+<script type="text/javascript" src="js/giphy.js"></script>
 
 </html>

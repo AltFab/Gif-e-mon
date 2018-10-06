@@ -67,15 +67,15 @@ $(document).ready(function() {
   function gameOver() {
     if (playerHealth <= 0 && enemyHealth <= 0) {
       $("#combat3").empty().append("It's a draw... but you still died. Nothing personnel, kid.");
-      $("#attack,#defend,#items").hide();
+      $("#attackButton,#defenseButton,#potionButton").hide();
       $("#combat4").show();
     } else if (playerHealth <= 0) {
       $("#combat3").empty().append("You Lose! Game Over!");
-      $("#attack,#defend,#items").hide();
+      $("#attackButton,#defenseButton,#potionButton").hide();
       $("#combat4").show();
     } else if (enemyHealth <= 0) {
       $("#combat3").empty().append("Congratulations! You Win!");
-      $("#attack,#defend,#items").hide();
+      $("#attackButton,#defenseButton,#potionButton").hide();
       $("#combat4").show();
     }
   }; //end gameOver

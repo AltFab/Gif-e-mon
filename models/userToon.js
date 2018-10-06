@@ -1,26 +1,41 @@
-var orm = require("../config/orm.js")
+// Dependencies
+// =============================================================
 
-var userToon = {
-    all:function(cb){
-        orm.all("gifedex", function(res){
-            cb(res);
-        });
+// This may be confusing but here Sequelize (capital) references the standard library
+var Sequelize = require("sequelize");
+// sequelize (lowercase) references our connection to the DB.
+var sequelize = require("../config/connection.js");
+
+
+
+var userToon = sequelize.define("userToon", {
+    user_name: {
+        type: DataTypes.String,
+        allowNull: false,
+        validate: {
+            len: [1]
+        }
     },
-    create: function(cols, vals,cb){
-        orm.create("gifedex", cols, vals, function(res){
-            cb(res);
-        });
+    score:{
+        type: DataTypes.INTEGER,
+        allowNull: true,
     },
-    update:function(objColVals, condition, cb){
-        orm.update("gifedex", objColVals, condition, function(res){
-            cb(res);
-        });
+    gif_link: {
+        type: DataTypes.TEXT,
+        allowNull: false,
     },
-    delete: function(condition, cb) {
-        orm.delete("gifedex", condition, function(res) {
-          cb(res);
-        });
-      }
-};
+    health: {
+        type: DataTypes.INTEGER,
+        defaultValue: "10",
+    },
+    attack: {
+        type: DataTypes.INTEGER,
+        defaultValue: "0",
+    },
+    potion: {
+        type: DataTypes.INTEGER,
+        defaultValue: "3",
+    },
+});
 
 module.exports = userToon;
