@@ -3,7 +3,7 @@
 let myChart = document.getElementById('myChart').getContext('2d');
 
 //Global Options
-Chart.defaults.global.defaultFontFamily = 'Lato';
+Chart.defaults.global.defaultFontFamily = '';
 Chart.defaults.global.defaultFontColor = '#777';
 
 let gameChart = new Chart(myChart, {
@@ -42,6 +42,7 @@ let gameChart = new Chart(myChart, {
         },
         //Chart Layout
         layout: {
+        
             padding: {
                 left: 50,
                 right: 50,

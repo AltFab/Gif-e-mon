@@ -117,11 +117,12 @@
     <br>
     <br>
     <div class="columns">
-        <div class="column col-2"></div>
+        <div class="column col-1"></div>
 
         <!-- scoreboard -->
-        <div class="column">
-            <div class="column col-lg-<1-10>">
+        
+            <div class="column col-5">
+                
                 <div class="container">
                     <div class="h4 text-light text-center text-bold">Scoreboard</div>
                     <table class="table table-striped bg-dark">
@@ -198,20 +199,21 @@
                     </table>
                 </div>
             </div>
-        </div>
+        
 
         <!-- chart.js -->
-        <div class="column">
-            <div class="column col-lg-<1-10>">
-                <div id="chart">
-                    <canvas id="myChart"></canvas>
+            <div class="column col-5">
+                <div class="container ">
+                        <div class="h4 text-light text-center text-bold">Build Performance</div>
+                    <div id="chart">
+                        <canvas id="myChart"></canvas>
+                    </div>
                 </div>
-
             </div>
-        </div>
+        
 
 
-        <div class="column col-2"></div>
+        <div class="column col-1"></div>
 
     </div>
     <br>
@@ -219,15 +221,11 @@
     <!-- buttons for attack defense and balance -->
     <div class="columns">
         <div class="column col-12 col-mx-auto text-center">
-            <button class="btn btn-primary btn-lg">Play again</button>
+            <button id="reset" class="btn btn-primary btn-lg"><a href="home.html"></a>Play again</button>
         </div>
     </div>
 
 
-    </div>
-
-    <br>
-    <br>
 
 
 
@@ -235,6 +233,7 @@
 
 
 </body>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="../js/chartdata.js"></script>
 
