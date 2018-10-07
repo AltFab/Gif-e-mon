@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+// initialize jquery
+
+>>>>>>> 1d13ef6c3c8ad000a83e23f3d1cff2743cc3452a
 $(document).ready(function () {
 
     $("#easy").on("click", function () {
@@ -17,8 +22,12 @@ $(document).ready(function () {
         attack: 0,
         potion: 3,
         buildPicked: "",
+<<<<<<< HEAD
         levelDone: 0,
 
+=======
+        levelDone: 0
+>>>>>>> 1d13ef6c3c8ad000a83e23f3d1cff2743cc3452a
 
     };
     console.log("base gif stats")
@@ -94,7 +103,11 @@ $(document).ready(function () {
         createUser(randoGif);
 
         function createUser(randoGif) {
+<<<<<<< HEAD
             $.post("/api/newUser/", randoGif, function () {
+=======
+            $.post("/api/posts/", randoGif, function () {
+>>>>>>> 1d13ef6c3c8ad000a83e23f3d1cff2743cc3452a
                 window.location.href = "/game";
             });
         };

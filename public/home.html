@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 
 </head>
 
@@ -20,7 +21,7 @@
     <div class="container">
         <div class="columns">
             <div class="card-header col-mx-auto">
-                <div class="card-title h1 text-secondary">Gif-e-mon</div>
+                <div id="h1" class="card-title h1 text-secondary">Gif-e-mon</div>
                 <div class="card-subtitle text-gray">Save the internet from evil memes!</div>
             </div>
         </div>
@@ -34,10 +35,14 @@
         <div class="column">
 
             <div class="column col-6 float-right text-center">
+<<<<<<< HEAD
                 <div id="homeCard" class="card">
                     <div class="card-image">
                         <img src="../images/watermelon.webp" id="melon-bye" class="img-responsive">
                     </div>
+=======
+                <div class="card">
+>>>>>>> 1d13ef6c3c8ad000a83e23f3d1cff2743cc3452a
                     <div id="gifs">
                     </div>
                     
@@ -74,18 +79,25 @@
                 <div class="columns">
                     <!-- attack -->
                     <div class="column col-2 col-mx-auto text-center">
-                        <input class="buildButton" value="attack" type="image" src="images/sword.png" width="60"
-                            height="60" alt="Attack">
+                        <div class="tooltip">
+                            <input class="buildButton" value="attack" type="image" src="images/sword.png" width="60"
+                                height="60" alt="Attack">
+                            <span class="tooltiptextA">Attack</span>
+                        </div>
                     </div>
                     <!-- balance -->
                     <div class="column col-2 col-mx-auto text-center">
-                        <input class="buildButton" value="balance" type="image" src="images/balance2.png" width="60"
-                            height="60" alt="Balance">
+                        <div class="tooltip">
+                            <input type="image" src="images/balance2.png" width="60" height="60" alt="Balance">
+                            <span class="tooltiptextB">Balance</span>
+                        </div>
                     </div>
                     <!-- defense -->
                     <div class="column col-2 col-mx-auto text-center">
-                        <input class="buildButton" value="defense" type="image" src="images/shiled2.png" width="60"
-                            height="60" alt="Shield">
+                        <div class="tooltip">
+                            <input type="image" src="images/shiled2.png" width="60" height="60" alt="Shield">
+                            <span class="tooltiptextS">Defend</span>
+                        </div>
                     </div>
                 </div>
                 <br>
@@ -137,7 +149,7 @@
                         <p>Potion - use this button to restore your gif's HP level</p>
                         <p>SCORE SYSTEM</p>
                         <p>1. Attack enemy<br>
-                            -increase score based on the lose of HP of enemy gif<br>
+                            -increase score based on the loss of HP from the enemy gif<br>
                             2. Kills enemy<br>
                             - increase points by a static 20 points for each kill<br>
                             3. Use none of your potions<br>

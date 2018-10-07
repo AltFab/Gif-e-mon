@@ -5,11 +5,15 @@ body {
   background-attachment: fixed;
   background-color:black;
   backface-visibility: 0.8;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 3px;
 }
 
 
 
-h1
+#h1 {
+  font-size: 70px;
+}
 h3 {
   color: white;
 }
@@ -35,6 +39,70 @@ battleboard{
   margin-right: 0px !important;
   margin-top: 10px;
   margin-bottom: 10px ;
+}
+
+.tooltip .tooltiptextA {
+  visibility: hidden;
+  width: 120px;
+  background-color: 	#6495ED;
+  color:white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptextA {
+  visibility: visible;
+}
+
+.tooltip .tooltiptextB {
+  visibility: hidden;
+  width: 120px;
+  background-color: 	#6495ED;
+  color:white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptextB {
+  visibility: visible;
+}
+
+.tooltip .tooltiptextS {
+  visibility: hidden;
+  width: 120px;
+  background-color: 	#6495ED;
+  color:white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptextS {
+  visibility: visible;
+}
+
+.tooltip .tooltiptextP {
+  visibility: hidden;
+  width: 120px;
+  background-color: 	#6495ED;
+  color:white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptextP {
+  visibility: visible;
 }
 
 #chart{
