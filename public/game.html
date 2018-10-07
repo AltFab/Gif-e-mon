@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gif-e-mon</title>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body>
+    <!-- header -->
+    <div class="container">
+        <div class="columns">
+            <div class="card-header col-mx-auto">
+                <div class="card-title h1 text-secondary">Gif-e-mon</div>
+                <div class="card-subtitle text-gray">Save the internet from evil memes!</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- user gif gif -->
+    <div class="columns">
+            <div class="column">
+                    <div class="column col-2 col-lg-<1-12>"></div>
+                </div>
+        <div class="column">
+            <div class="column col-mx-auto battleboard">
+                <div class="card">
+                    <div id="gifs">
+
+                    </div>
+                    <div class="card-header">
+                        <div class="card-title h5">User Gif</div>
+                    </div>
+                </div>
+                <br>
+                <div class="columns">
+                    <div class="column col-12 col-mx-auto text-center">
+                        <div class="bar bar-sm">
+                            <div class="bar-item" role="progressbar" style="width:25%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- split -->
+        <div class="divider-vert"></div>
+
+        <!-- battle log -->
+        <div class="column">
+            <div class="column battleboard">
+                <div class="panel bg-secondary">
+                    <div class="panel-header">
+                        <div class="panel-title text-center">Battle Log</div>
+                    </div>
+                    <div class="panel-body" id="battelog">
+                        stuff about the battle.
+                        gif 1 attacks gif 2
+                        gif 2 fainted.
+                        +100 xp.
+                        derp
+                        derp
+                        derp
+                        derp
+                        derp
+                        derp
+                        You are the meme master
+                    </div>
+                    <br>
+                    <div class="panel-footer text-center">
+                        score board visual 1234!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- split -->
+        <div class="divider-vert"></div>
+
+        <!-- enemy gif -->
+        <div class="column">
+            <div class="column battleboard">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/watermelon.webp" class="img-responsive">
+                    </div>
+                    <div class="card-header">
+                        <div class="card-title h5">enemy gif</div>
+                    </div>
+                </div>
+                <br>
+                <div class="bar bar-sm">
+                    <div class="bar-item" role="progressbar" style="width:25%;" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+                <div class="column col-2 col-lg-<1-12>"></div>
+            </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- buttons for attack defense and balance -->
+    <div class="columns">
+        <div class="column col-12 col-mx-auto text-center">
+            <h3 class="text-light">Battle Commands</h3>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column">
+            <div class="column col-2 col-lg-<1-12>"></div>
+        </div>
+        <!-- Attack -->
+        <div class="column">
+            <div  class="column col-2 col-mx-auto text-center">
+                <input id="actionButton" value="attack" type="image" id="attackButton" src="images/sword.png" width="60" height="60" alt="Attack">
+            </div>
+        </div>
+        <!-- Defend -->
+        <div class="column">
+            <div class="column col-2 col-mx-auto text-center">
+                <input id="actionButton" value="defend" type="image" id="defenseButton" src="images/shiled2.png" width="60" height="60" alt="defend">
+            </div>
+        </div>
+        <!-- Potion -->
+        <div class="column">
+            <div class="column col-2 col-mx-auto text-center">
+                <input id="actionButton" value="potion" type="image" id="potionButton" src="images/potion.png" width="60" height="60" alt="heal">
+            </div>
+        </div>
+        <div class="column">
+            <div class="column col-2 col-lg-<1-12>"></div>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/giphy.js"></script>
+
+</html>
