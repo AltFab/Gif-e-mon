@@ -5,11 +5,15 @@ body {
   background-attachment: fixed;
   background-color:black;
   backface-visibility: 0.8;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 3px;
 }
 
 
 
-h1
+#h1 {
+  font-size: 70px;
+}
 h3 {
   color: white;
 }
