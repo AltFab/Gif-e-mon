@@ -53,6 +53,7 @@ module.exports = function(app) {
     console.log(req.body);
     db.userToon.create({
       user_name: req.body.user_name,
+      score: req.body.score,
       gif_link: req.body.gif_link,
       health: req.body.health,
       attack: req.body.attack,

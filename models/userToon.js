@@ -9,7 +9,8 @@ var userToon = sequelize.define("userToon", {
     },
     score:{
         type: DataTypes.INTEGER,
-        allowNull: true,
+        defaultValue: "0",
+        allowNull: true
     },
     gif_link: {
         type: DataTypes.TEXT,
