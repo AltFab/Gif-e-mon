@@ -1,10 +1,7 @@
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references our connection to the DB.
-var sequelize = require("../config/connection.js");
-
+module.exports = function(sequelize, DataTypes){
 var enemyToon = sequelize.define("enemyToon", {
     enemy_gif_name: {
-        type: DataTypes.String,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     enemy_gif_link: {
@@ -25,6 +22,5 @@ var enemyToon = sequelize.define("enemyToon", {
     }
 });
 
-enemyToon.sync();
-
-module.exports = enemyToon;
+return enemyToon;
+};

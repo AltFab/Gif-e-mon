@@ -10,7 +10,6 @@ $(document).ready(function () {
         $("#modal-id").removeClass("active");
     });
     
-
     var randoGif = {
         gif_link: "",
         user_name: "",
@@ -18,6 +17,7 @@ $(document).ready(function () {
         attack: 0,
         potion: 3,
     };
+    
     console.log("base gif stats")
     console.log(randoGif);
 
