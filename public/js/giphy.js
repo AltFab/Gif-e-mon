@@ -18,6 +18,9 @@ $(document).ready(function () {
         health: 10,
         attack: 0,
         potion: 3,
+        buildPicked: "",
+        levelDone: 0
+
     };
     console.log("base gif stats")
     console.log(randoGif);
@@ -48,10 +51,14 @@ $(document).ready(function () {
                 $("#gifs").prepend(image);
             });
     });
+
+    //user clicks a desired build. manipulates stats accordingly 
     $(".buildButton").on("click", function () {
-        var buildChosen = $(this).val()
-        console.log(buildChosen)
-        console.log(typeof (buildChosen))
+        var buildChosen = $(this).val();
+        randoGif.buildPicked = buildChosen;
+        console.log(buildChosen);
+        console.log(randoGif.buildPicked);
+
         switch (buildChosen) {
             case "attack": {
                 randoGif.attack = 6;
@@ -74,6 +81,8 @@ $(document).ready(function () {
 
     })
 
+    //start game button grabs all user set up info, creates a new user in db.
+    // then moves to gameplay html.
     $("#start").on("click", function () {
         randoGif.user_name = $("#username").val().trim();
         //send to mysql  randoGif
@@ -82,11 +91,13 @@ $(document).ready(function () {
 
         createUser(randoGif);
 
+        function createUser(randoGif) {
+            $.post("/api/posts/", randoGif, function () {
+                window.location.href = "/game";
+            });
+        };
 
-        
 
     });
-    function createUser(randoGif) {
-        $.post("/api/posts/", randoGif, function () {
-          window.location.href = "/blog";
-        });
+
+});

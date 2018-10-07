@@ -6,74 +6,79 @@ var db = require("../models");
 
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function (app) {
 
   // GET route for getting all of the posts
-  app.get("/api/posts/", function(req, res) {
+  app.get("/api/posts/", function (req, res) {
     db.Post.findAll({})
-      .then(function(dbPost) {
+      .then(function (dbPost) {
         res.json(dbPost);
       });
   });
 
   // Get route for returning posts of a specific category
-  app.get("/api/posts/category/:category", function(req, res) {
+  app.get("/api/posts/category/:category", function (req, res) {
     db.Post.findAll({
       where: {
         category: req.params.category
       }
     })
-      .then(function(dbPost) {
+      .then(function (dbPost) {
         res.json(dbPost);
       });
   });
 
   // Get route for retrieving a single post
-  app.get("/api/posts/:id", function(req, res) {
+  app.get("/api/posts/:id", function (req, res) {
     db.Post.findOne({
       where: {
         id: req.params.id
       }
     })
-      .then(function(dbPost) {
+      .then(function (dbPost) {
         res.json(dbPost);
       });
   });
 
   // POST route for saving a new post
-  app.post("/api/posts", function(req, res) {
+  app.post("/api/posts", function (req, res) {
     console.log(req.body);
     db.Post.create({
-      title: req.body.title,
-      body: req.body.body,
-      category: req.body.category
+      gif_link: req.randoGif.gif_link,
+      user_name: req.randoGif.user_name,
+      health: req.randoGif.health,
+      attack: req.randoGif.attack,
+      potion: req.randoGif.potion,
+      buildPicked: req.randoGif.buildPicked,
+      levelDone: req.randoGif.levelDone
+
     })
-      .then(function(dbPost) {
+      .then(function (dbPost) {
         res.json(dbPost);
       });
   });
 
   // DELETE route for deleting posts
-  app.delete("/api/posts/:id", function(req, res) {
+  app.delete("/api/posts/:id", function (req, res) {
     db.Post.destroy({
       where: {
         id: req.params.id
       }
     })
-      .then(function(dbPost) {
+      .then(function (dbPost) {
         res.json(dbPost);
       });
   });
 
   // PUT route for updating posts
-  app.put("/api/posts", function(req, res) {
+  app.put("/api/posts", function (req, res) {
     db.Post.update(req.body,
       {
         where: {
           id: req.body.id
         }
       })
-      .then(function(dbPost) {
+      .then(function (dbPost) {
         res.json(dbPost);
       });
   });
