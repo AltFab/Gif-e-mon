@@ -1,7 +1,7 @@
 //populate the gameboard with userGif and enemyGif
 $(document).ready(function () {
    
-    //call connection to MySQL
+    //call connection to MySQL'
     //populate userGif
     //populate enemyGif
 

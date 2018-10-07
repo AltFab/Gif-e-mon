@@ -6,8 +6,6 @@ var Sequelize = require("sequelize");
 // sequelize (lowercase) references our connection to the DB.
 var sequelize = require("../config/connection.js");
 
-
-
 var userToon = sequelize.define("userToon", {
     user_name: {
         type: DataTypes.String,
@@ -37,5 +35,6 @@ var userToon = sequelize.define("userToon", {
         defaultValue: "3",
     },
 });
+userToon.sync();
 
 module.exports = userToon;
