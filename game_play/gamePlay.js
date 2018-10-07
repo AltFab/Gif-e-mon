@@ -2,9 +2,6 @@
 $(document).ready(function () {
    
     //call connection to MySQL'
-    connection.query('SELECT * FROM gifedex', (err,rows) => {
-        if(err) throw err;
-    });
     //populate userGif
     //populate enemyGif
 
