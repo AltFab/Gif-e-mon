@@ -5,7 +5,6 @@ $(document).ready(function () {
     //populate userGif
     //populate enemyGif
 
-
     //battle log round # (via enemy gif ID)
     //battle log start game.
     

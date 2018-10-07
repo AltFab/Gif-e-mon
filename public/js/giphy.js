@@ -1,15 +1,16 @@
 // initialize jquery
+
 $(document).ready(function () {
-    
-    $("#easy").on("click", function(){
+
+    $("#easy").on("click", function () {
         console.log("click modal");
         $("#modal-id").addClass("active");
     });
-    $("#close").on("click", function(){
+    $("#close").on("click", function () {
         console.log("close modal");
         $("#modal-id").removeClass("active");
     });
-    
+
 
     var randoGif = {
         gif_link: "",
@@ -17,6 +18,9 @@ $(document).ready(function () {
         health: 10,
         attack: 0,
         potion: 3,
+        buildPicked: "",
+        levelDone: 0
+
     };
     console.log("base gif stats")
     console.log(randoGif);
@@ -49,22 +53,29 @@ $(document).ready(function () {
                 $("#gifs").prepend(image);
             });
     });
+
+    //user clicks a desired build. manipulates stats accordingly 
     $(".buildButton").on("click", function () {
-        var buildChosen = $(this).val()
-        console.log(buildChosen)
-        console.log(typeof(buildChosen))
+        var buildChosen = $(this).val();
+        randoGif.buildPicked = buildChosen;
+        console.log(buildChosen);
+        console.log(randoGif.buildPicked);
+
         switch (buildChosen) {
-            case "attack":{
+            case "attack": {
                 randoGif.attack = 6;
-                randoGif.health = randoGif.health + 4;}
+                randoGif.health = randoGif.health + 4;
+            }
                 break;
-            case "defense":{
+            case "defense": {
                 randoGif.attack = 4;
-                randoGif.health = randoGif.health + 6;}
+                randoGif.health = randoGif.health + 6;
+            }
                 break;
-            case "balance":{
+            case "balance": {
                 randoGif.attack = 5;
-                randoGif.health = randoGif.health + 5;}
+                randoGif.health = randoGif.health + 5;
+            }
                 break;
         }
 
@@ -72,10 +83,23 @@ $(document).ready(function () {
 
     })
 
+    //start game button grabs all user set up info, creates a new user in db.
+    // then moves to gameplay html.
     $("#start").on("click", function () {
         randoGif.user_name = $("#username").val().trim();
         //send to mysql  randoGif
         console.log("gif stats modified")
         console.log(randoGif);
+
+        createUser(randoGif);
+
+        function createUser(randoGif) {
+            $.post("/api/posts/", randoGif, function () {
+                window.location.href = "/game";
+            });
+        };
+
+
     });
+
 });
