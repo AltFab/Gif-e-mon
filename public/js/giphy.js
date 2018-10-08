@@ -8,8 +8,8 @@ $(document).ready(function () {
         console.log("close modal");
         $("#modal-id").removeClass("active");
     });
-
-
+    
+    // create variable object to pull data from sql
     var randoGif = {
         gif_link: "",
         user_name: "",
@@ -27,9 +27,11 @@ $(document).ready(function () {
     // on click function generates and pulls gif from giphy
     $("button#random-gif.btn.btn-primary").on("click", function () {
         // this method rotates to the next gif and removes the current one
+        $("img#melon-bye").attr("src", "animated-gif");
+        $("img#melon-bye").hide();
         $("#gifs").empty();
        
-        var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=NUmzu2fHHFydYfDYcToF2MqA12752Vfe&rating=pg-13&tag=cartoon";
+        var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg-13&tag=cartoon";
         console.log(queryURL)
         $.ajax({
             url: queryURL,
@@ -44,7 +46,7 @@ $(document).ready(function () {
                 var image = $("<img>");
 
                 image.attr("src", results.images.fixed_height.url);
-                image.attr("class", "item");
+                image.attr("class", "animated-gif");
 
                 randoGif.gif_link = results.images.fixed_height.url;
                 // populates the gif

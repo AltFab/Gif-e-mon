@@ -1,10 +1,21 @@
 require("dotenv").config();
+// heroku requires "cool" dependency at the start
+// var cool = require('cool-ascii-faces')
 var express = require("express");
 var bodyParser = require("body-parser");
 
 var db = require("./models");
 
 var app = express();
+// heroku requires to add a new route for /cool***
+// express()
+// .use(express.static(path.join(__dirname, 'public')))
+// .set('views', path.join(__dirname, 'views'))
+// .set('view engine', 'ejs')
+// .get('/', (req, res) => res.render('pages/index'))
+// .get('/cool', (req, res) => res.send(cool()))
+// .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
 var PORT = process.env.PORT || 3000;
 
 // Middleware

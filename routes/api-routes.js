@@ -6,7 +6,7 @@ var db = require("../models");
 
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function (app) {
 
   // GET route for getting all users
   app.get("/api/allUsers/", function(req, res){
