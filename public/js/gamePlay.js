@@ -1,14 +1,75 @@
 //populate the gameboard with userGif and enemyGif
 $(document).ready(function () {
-   
+
+    var gameRound = 1;
+    var ID = "";
+    console.log(gameRound);
+    newRound();
+    function newRound() {
+
+
+        if (gameRound > 1) {
+            ID = gameRound
+        } else if (gameRound === 1) {
+            ID = 1;
+        }
+    }
+    console.log(ID + "id");
+    //enemy gif
+    $.get("/api/allEnemies/" + ID, function (data) {
+        console.log("enemy")
+        console.log(typeof (data))
+        gifFiller(data);
+
+        function gifFiller(data) {
+            var newHeader = $("<div>");
+            newHeader.addClass("card-title")
+            newHeader.addClass("h5");
+            newHeader.text(data.enemy_gif_name);
+            $("#enemyName").append(newHeader);
+            console.log(data.enemy_gif_name);
+
+            console.log("creating img gif");
+            var newGif = $("<img />");
+            newGif.addClass("img-responsive");
+            newGif.attr("src", data.enemy_gif_link);
+            $("#enemyGif").append(newGif);
+            console.log(data.enemy_gif_link)
+
+        }
+        $.get("/api/allUsers/" + ID, function (data) {
+            console.log("user")
+            console.log(typeof (data))
+            gifFiller(data);
+
+            function gifFiller(data) {
+                var newHeader = $("<div>");
+                newHeader.addClass("card-title")
+                newHeader.addClass("h5");
+                newHeader.text(data.user_name);
+                $("#userName").append(newHeader);
+                console.log(data.user_name);
+
+                console.log("creating img gif");
+                var newGif = $("<img />");
+                newGif.addClass("img-responsive");
+                newGif.attr("src", data.gif_link);
+                $("#userGif").append(newGif);
+                console.log(data.gif_link)
+
+            }
+        }
+)
+
+});
     //call connection to MySQL'
     //populate userGif
-    //populate enemyGif
+
 
 
     //battle log round # (via enemy gif ID)
     //battle log start game.
-    
+
 });
 
 //user clicks button calls operations.
@@ -47,9 +108,9 @@ function attack() {
     else if (attackChance <= 10) {
         //miss attack do not change enemy health
         $("#battlelog").empty().append("You your attack missed!");
-        
+
     }
-    else (){
+    else {
         //static base damage
         var damage = attack * Math.floor((Math.random() * 6) + 2);
 
@@ -73,7 +134,7 @@ function hpCheck() {
         //update user stats to mySQL
 
 
-        
+
     } else {
 
         //update new hp to database
@@ -81,6 +142,3 @@ function hpCheck() {
         endTurn()
     }
 }
-
-
-
