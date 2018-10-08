@@ -1,76 +1,78 @@
 //populate the gameboard with userGif and enemyGif
 $(document).ready(function () {
-
+    //new round function to change rounds and then enemies.
     var gameRound = 1;
     var ID = "";
     console.log(gameRound);
+    
+    var roundCount = $("<p>").append("Round: " + gameRound);
+    console.log(roundCount)
+    $("#battlelog").text(roundCount);
+
+    
     newRound();
     function newRound() {
-
-
         if (gameRound > 1) {
             ID = gameRound
         } else if (gameRound === 1) {
             ID = 1;
         }
-    }
-    console.log(ID + "id");
-    //enemy gif
-    $.get("/api/allEnemies/" + ID, function (data) {
-        console.log("enemy")
-        console.log(typeof (data))
-        gifFiller(data);
+        enemyField();
+    };
 
-        function gifFiller(data) {
-            var newHeader = $("<div>");
-            newHeader.addClass("card-title")
-            newHeader.addClass("h5");
-            newHeader.text(data.enemy_gif_name);
-            $("#enemyName").append(newHeader);
-            console.log(data.enemy_gif_name);
-
-            console.log("creating img gif");
-            var newGif = $("<img />");
-            newGif.addClass("img-responsive");
-            newGif.attr("src", data.enemy_gif_link);
-            $("#enemyGif").append(newGif);
-            console.log(data.enemy_gif_link)
-
-        }
-        $.get("/api/allUsers/" + ID, function (data) {
-            console.log("user")
-            console.log(typeof (data))
+    console.log(ID + " id");
+    function enemyField() {
+        //populates enemy field
+        $.get("/api/allEnemies/" + ID, function (data) {
+            console.log("enemy")
             gifFiller(data);
 
             function gifFiller(data) {
                 var newHeader = $("<div>");
                 newHeader.addClass("card-title")
                 newHeader.addClass("h5");
-                newHeader.text(data.user_name);
-                $("#userName").append(newHeader);
-                console.log(data.user_name);
+                newHeader.text(data.enemy_gif_name);
+                $("#enemyName").append(newHeader);
+                console.log(data.enemy_gif_name);
 
                 console.log("creating img gif");
                 var newGif = $("<img />");
                 newGif.addClass("img-responsive");
-                newGif.attr("src", data.gif_link);
-                $("#userGif").append(newGif);
-                console.log(data.gif_link)
+                newGif.attr("src", data.enemy_gif_link);
+                $("#enemyGif").append(newGif);
+                console.log(data.enemy_gif_link)
 
             }
+        })
+    };
+
+    //populate user field
+    $.get("/api/allUsers/" + ID, function (data) {
+        console.log("user")
+        userFiller(data);
+
+        function userFiller(data) {
+            var newHeader = $("<div>");
+            newHeader.addClass("card-title")
+            newHeader.addClass("h5");
+            newHeader.text(data.user_name);
+            $("#userName").append(newHeader);
+
+
+            console.log("creating img gif");
+            var newGif = $("<img />");
+            newGif.addClass("img-responsive");
+            newGif.attr("src", data.gif_link);
+            $("#userGif").append(newGif);
+
+
         }
-)
-
+    });
 });
-    //call connection to MySQL'
-    //populate userGif
+//battle log round # (via enemy gif ID)
+//battle log start game.
 
 
-
-    //battle log round # (via enemy gif ID)
-    //battle log start game.
-
-});
 
 //user clicks button calls operations.
 $("#actionButton").on("click", function () {
