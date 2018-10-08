@@ -1,9 +1,10 @@
 DROP DATABASE IF EXISTS gifemon_db;
 CREATE DATABASE gifemon_db;
 
+/*
 USE gifemon_db;
 -- user info
-CREATE TABLE gifedex(
+CREATE TABLE userToon(
 	id INT AUTO_INCREMENT NOT NULL,
     user_name VARCHAR(50) NOT NULL,
 	score INT,
@@ -24,3 +25,4 @@ CREATE TABLE gifemy(
     enemy_potion INT(1) NOT NULL,
 	PRIMARY KEY(id)
 );
+*/

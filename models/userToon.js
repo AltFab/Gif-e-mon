@@ -1,16 +1,7 @@
-// Dependencies
-// =============================================================
-
-// This may be confusing but here Sequelize (capital) references the standard library
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references our connection to the DB.
-var sequelize = require("../config/connection.js");
-
-
-
+module.exports = function(sequelize, DataTypes){
 var userToon = sequelize.define("userToon", {
     user_name: {
-        type: DataTypes.String,
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
             len: [1]
@@ -18,7 +9,8 @@ var userToon = sequelize.define("userToon", {
     },
     score:{
         type: DataTypes.INTEGER,
-        allowNull: true,
+        defaultValue: "0",
+        allowNull: true
     },
     gif_link: {
         type: DataTypes.TEXT,
@@ -36,6 +28,16 @@ var userToon = sequelize.define("userToon", {
         type: DataTypes.INTEGER,
         defaultValue: "3",
     },
+    buildPicked: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    levelDone: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0
+    }
 });
+return userToon;
+}
 
-module.exports = userToon;
+

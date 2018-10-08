@@ -6,75 +6,77 @@ var db = require("../models");
 
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function (app) {
 
-  // GET route for getting all of the posts
-  app.get("/api/posts/", function(req, res) {
-    db.Post.findAll({})
-      .then(function(dbPost) {
-        res.json(dbPost);
+  // GET route for getting all users
+  app.get("/api/allUsers/", function(req, res){
+    db.userToon.findAll({})
+      .then(function(results){
+        res.json(results);
       });
   });
 
-  // Get route for returning posts of a specific category
-  app.get("/api/posts/category/:category", function(req, res) {
-    db.Post.findAll({
-      where: {
-        category: req.params.category
-      }
-    })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
-  });
-
-  // Get route for retrieving a single post
-  app.get("/api/posts/:id", function(req, res) {
-    db.Post.findOne({
+  // GET route for getting one user
+  app.get("/api/allUsers/:id", function(req, res) {
+    db.userToon.findOne({
       where: {
         id: req.params.id
       }
     })
-      .then(function(dbPost) {
-        res.json(dbPost);
+      .then(function(results) {
+        res.json(results);
       });
   });
+
+    // GET route for getting all enemies
+    app.get("/api/allEnemies/", function(req, res){
+      db.enemyToon.findAll({})
+        .then(function(results){
+          res.json(results);
+        });
+    });
+  
+    // GET route for getting one enemy
+    app.get("/api/allEnemies/:id", function(req, res) {
+      db.enemyToon.findOne({
+        where: {
+          id: req.params.id
+        }
+      })
+        .then(function(results) {
+          res.json(results);
+        });
+    });
 
   // POST route for saving a new post
-  app.post("/api/posts", function(req, res) {
+  app.post("/api/newUser", function(req, res) {
     console.log(req.body);
-    db.Post.create({
-      title: req.body.title,
-      body: req.body.body,
-      category: req.body.category
+    db.userToon.create({
+      user_name: req.body.user_name,
+      score: req.body.score,
+      gif_link: req.body.gif_link,
+      health: req.body.health,
+      attack: req.body.attack,
+      potion: req.body.potion,
+      buildPicked: req.body.buildPicked,
+      levelDone: req.body.levelDone
     })
-      .then(function(dbPost) {
-        res.json(dbPost);
+      .then(function(results) {
+        res.json(results);
       });
   });
 
-  // DELETE route for deleting posts
-  app.delete("/api/posts/:id", function(req, res) {
-    db.Post.destroy({
-      where: {
-        id: req.params.id
-      }
-    })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
-  });
-
-  // PUT route for updating posts
-  app.put("/api/posts", function(req, res) {
-    db.Post.update(req.body,
+  // PUT route for updating post
+  app.put("/api/updateUser", function(req, res) {
+    db.userToon.update(req.body,
       {
         where: {
           id: req.body.id
         }
       })
-      .then(function(dbPost) {
-        res.json(dbPost);
+      .then(function(results) {
+        res.json(results);
       });
   });
 };
+

@@ -1,56 +1,184 @@
 body {
   background-image: url("../images/hole.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color:black;
-  backface-visibility: 0.8;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-color:black;
+ backface-visibility: 0.8;
+ font-family: 'Bangers', cursive;
+ letter-spacing: 3px;
 }
 
 
 
-h1
+#h1 {
+ font-size: 70px;
+}
 h3 {
-  color: white;
+ color: white;
 }
 
 .build{
-  margin: 10px;
+ margin: 10px;
 
 }
 
 .optionBuild{
-  height: auto; 
-    width: auto; 
-    max-width: 200px; 
-    max-height: 200px;
-  
+ height: auto;
+   width: auto;
+   max-width: 200px;
+   max-height: 200px;
+
 }
 
 #gifs{
-  width: auto;
+ width: auto;
 }
 battleboard{
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-  margin-top: 10px;
-  margin-bottom: 10px ;
+ margin-left: 0px !important;
+ margin-right: 0px !important;
+ margin-top: 10px;
+ margin-bottom: 10px ;
+}
+
+.tooltip .tooltiptextA {
+ visibility: hidden;
+ width: 120px;
+ background-color:     #6495ED;
+ color:white;
+ text-align: center;
+ border-radius: 6px;
+ padding: 5px 0;
+ position: absolute;
+ z-index: 1;
+}
+
+.tooltip:hover .tooltiptextA {
+ visibility: visible;
+}
+
+.tooltip .tooltiptextB {
+ visibility: hidden;
+ width: 120px;
+ background-color:     #6495ED;
+ color:white;
+ text-align: center;
+ border-radius: 6px;
+ padding: 5px 0;
+ position: absolute;
+ z-index: 1;
+}
+
+.tooltip:hover .tooltiptextB {
+ visibility: visible;
+}
+
+.tooltip .tooltiptextS {
+ visibility: hidden;
+ width: 120px;
+ background-color:     #6495ED;
+ color:white;
+ text-align: center;
+ border-radius: 6px;
+ padding: 5px 0;
+ position: absolute;
+ z-index: 1;
+}
+
+.tooltip:hover .tooltiptextS {
+ visibility: visible;
+}
+
+.tooltip .tooltiptextP {
+ visibility: hidden;
+ width: 120px;
+ background-color:     #6495ED;
+ color:white;
+ text-align: center;
+ border-radius: 6px;
+ padding: 5px 0;
+ position: absolute;
+ z-index: 1;
+}
+
+.tooltip:hover .tooltiptextP {
+ visibility: visible;
+}
+
+.tooltip .tooltiptextA {
+  visibility: hidden;
+  width: 120px;
+  background-color: 	#6495ED;
+  color:white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptextA {
+  visibility: visible;
+}
+
+.tooltip .tooltiptextB {
+  visibility: hidden;
+  width: 120px;
+  background-color: 	#6495ED;
+  color:white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptextB {
+  visibility: visible;
+}
+
+.tooltip .tooltiptextS {
+  visibility: hidden;
+  width: 120px;
+  background-color: 	#6495ED;
+  color:white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptextS {
+  visibility: visible;
+}
+
+.tooltip .tooltiptextP {
+  visibility: hidden;
+  width: 120px;
+  background-color: 	#6495ED;
+  color:white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptextP {
+  visibility: visible;
 }
 
 #chart{
-  width: auto;
-  padding: 10px;
-  margin-top: 30px;
-  background-color:white;
-  
+ width: auto;
+ padding: 10px;
+ margin-top: 30px;
+ background-color:white;
+
 }
 img#melon-bye.img-responsive{
-  width: 351px;
-  height: 288px;
-}
-img#bye-bye.img-responsive{
-  width: 353px;
-  height: 290px;
+ width: 353px;
+ height: 290px;
 }
 img#scoreImg.img-responsive{
   width: 353px;
