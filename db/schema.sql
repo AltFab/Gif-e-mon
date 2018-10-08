@@ -14,8 +14,8 @@ CREATE TABLE userToon(
     PRIMARY KEY(id)
 );
 
--- enemy stats
-CREATE TABLE gifbattles(
+
+CREATE TABLE gifemy(
 	id INT AUTO_INCREMENT NOT NULL,
     enemy_gif_name VARCHAR(200) NOT NULL,
     enemy_gif_link VARCHAR(max) NOT NULL,
