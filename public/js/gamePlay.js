@@ -1,7 +1,7 @@
 //populate the gameboard with userGif and enemyGif
 $(document).ready(function () {
     //new round function to change rounds and then enemies.
-    var gameRound = 1;
+    var gameRound = 5;
     var ID = "";
     console.log(gameRound);
     
@@ -37,7 +37,7 @@ $(document).ready(function () {
                 var newGif = $("<img />");
                 newGif.addClass("img-responsive");
                 newGif.attr("src", data.enemy_gif_link);
-                newGif.addId("bye-bye");
+                newGif.attr("id", "bye-bye");
                 $("#enemyGif").append(newGif);
                 console.log(data.enemy_gif_link)
 
@@ -61,7 +61,7 @@ $(document).ready(function () {
             console.log("creating img gif");
             var newGif = $("<img />");
             newGif.addClass("img-responsive");
-            newGif.addId("bye-bye");
+            newGif.attr("id", "bye-bye");
             newGif.attr("src", data.gif_link);
             $("#userGif").append(newGif);
 

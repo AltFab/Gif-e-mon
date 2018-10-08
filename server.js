@@ -1,6 +1,6 @@
 require("dotenv").config();
 // heroku requires "cool" dependency at the start
-var cool = require('cool-ascii-faces')
+// var cool = require('cool-ascii-faces')
 var express = require("express");
 var bodyParser = require("body-parser");
 
