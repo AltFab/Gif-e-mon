@@ -1,75 +1,16 @@
 //populate the gameboard with userGif and enemyGif
 $(document).ready(function () {
-    //new round function to change rounds and then enemies.
-    var gameRound = 5;
-    var ID = "";
-    console.log(gameRound);
+   
+    //call connection to MySQL'
+    //populate userGif
+    //populate enemyGif
+
+
+    //battle log round # (via enemy gif ID)
+    //battle log start game.
     
-
-
-
-    newRound();
-    function newRound() {
-        if (gameRound > 1) {
-            ID = gameRound
-        } else if (gameRound === 1) {
-            ID = 1;
-        }
-        enemyField();
-    };
-
-    console.log(ID + " id");
-    function enemyField() {
-        //populates enemy field
-        $.get("/api/allEnemies/" + ID, function (data) {
-            console.log("enemy")
-            gifFiller(data);
-
-            function gifFiller(data) {
-                var newHeader = $("<div>");
-                newHeader.addClass("card-title")
-                newHeader.addClass("h5");
-                newHeader.text(data.enemy_gif_name);
-                $("#enemyName").append(newHeader);
-                console.log(data.enemy_gif_name);
-
-                console.log("creating img gif");
-                var newGif = $("<img />");
-                newGif.addClass("img-responsive");
-                newGif.attr("src", data.enemy_gif_link);
-                newGif.attr("id", "bye-bye");
-                $("#enemyGif").append(newGif);
-                console.log(data.enemy_gif_link)
-
-            }
-        })
-    };
-
-    //populate user field
-    $.get("/api/allUsers/" + ID, function (data) {
-        console.log("user")
-        userFiller(data);
-
-        function userFiller(data) {
-            var newHeader = $("<div>");
-            newHeader.addClass("card-title")
-            newHeader.addClass("h5");
-            newHeader.text(data.user_name);
-            $("#userName").append(newHeader);
-
-
-            console.log("creating img gif");
-            var newGif = $("<img />");
-            newGif.addClass("img-responsive");
-            newGif.attr("id", "bye-bye");
-            newGif.attr("src", data.gif_link);
-            $("#userGif").append(newGif);
-
-
-        }
-    });
-});
-var player_hp = 100;
+    //temporary variables
+    var player_hp = 100;
     var enemy_hp = 100;
     var score = 0;
 
@@ -127,3 +68,4 @@ var player_hp = 100;
 
 
 
+});

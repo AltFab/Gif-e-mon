@@ -1,6 +1,7 @@
 DROP DATABASE IF EXISTS gifemon_db;
 CREATE DATABASE gifemon_db;
 
+/*
 USE gifemon_db;
 -- user info
 CREATE TABLE userToon(
@@ -24,3 +25,4 @@ CREATE TABLE gifemy(
     enemy_potion INT(1) NOT NULL,
 	PRIMARY KEY(id)
 );
+*/

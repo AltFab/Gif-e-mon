@@ -31,7 +31,7 @@ $(document).ready(function () {
         $("img#melon-bye").hide();
         $("#gifs").empty();
        
-        var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=NUmzu2fHHFydYfDYcToF2MqA12752Vfe&rating=pg-13&tag=cartoon";
+        var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg-13&tag=cartoon";
         console.log(queryURL)
         $.ajax({
             url: queryURL,
