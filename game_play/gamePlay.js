@@ -60,6 +60,30 @@ function attack() {
     then.hpCheck();
 
 }
+
+// create potion function
+function potion(event){
+    // when potion equals 0, this function does not activate
+    if(potion === 0){
+        event.preventDefault();
+    }
+    else if (potion <= 3){
+    // potions are going to recover 70% of user health
+        var potions = Math.floor(7/health * 100);
+    // display battle log
+    $("#battlelog").empty().append("You have recovered some health!")
+    // add 70% to health
+    health += potions;
+    // display user's updated health
+    $("#userHP").innerHTML = "Health: " + health;
+    // subtract 1 potion
+    potion -= 1;
+}
+
+then.hpCheck();
+
+    
+}
 //animate icon
 //decrease hp
 // check if Enemy Hp = zero

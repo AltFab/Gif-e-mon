@@ -10,7 +10,7 @@ $(document).ready(function () {
         $("#modal-id").removeClass("active");
     });
     
-
+    // create variable object to pull data from sql
     var randoGif = {
         gif_link: "",
         user_name: "",
