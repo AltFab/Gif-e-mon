@@ -12,22 +12,20 @@ $(document).ready(function () {
 });
 
 //user clicks button calls operations.
-$("#actionButton").on("click", function () {
-    var actionChosen = $(this).val()
-    switch (actionChosen) {
-        case attack:
-            attack();
-            break;
-        case defend:
-            defend();
-            break;
-        case potion:
-            potion();
-            break;
-    }
-});
+// $("#actionButton").on("click", function () {
+//     var actionChosen = $(this).val()
+//     switch (actionChosen) {
+//         case attack:
+//             attack();
+//             break;
+//         case potion:
+//             potion();
+//             break;
+//     }
+// });
 
-function attack() {
+$("#attackButton").on("click", function(){
+    console.log("attack");
     var attackChance = Math.floor((Math.random() * 100) + 1);
     console.log(attackChance);
     if (attackChance >= 95) {
@@ -49,7 +47,7 @@ function attack() {
         $("#battlelog").empty().append("You your attack missed!");
         
     }
-    else (){
+    else if (attackChance === 0){
         //static base damage
         var damage = attack * Math.floor((Math.random() * 6) + 2);
 
@@ -57,9 +55,9 @@ function attack() {
         enemy_hp -= damage;
         $("#enemyHP").innerHTML = "Health: " + enemyHealth + "/100";
     }
-    then.hpCheck();
+ 
 
-}
+});
 
 // create potion function
 function potion(event){
@@ -78,6 +76,7 @@ function potion(event){
     $("#userHP").innerHTML = "Health: " + health;
     // subtract 1 potion
     potion -= 1;
+    console.log(potion);
 }
 
 then.hpCheck();

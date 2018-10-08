@@ -28,7 +28,5 @@ function enemyAction() {
         $("battleog").empty().append("Enemy prepares for your attack!");
 
         attack -= enemyBlock;
-    }
-
-
-        
+            }
+        }}})
