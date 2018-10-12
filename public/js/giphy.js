@@ -1,5 +1,3 @@
-// initialize jquery
-
 $(document).ready(function () {
 
     $("#easy").on("click", function () {
@@ -10,8 +8,8 @@ $(document).ready(function () {
         console.log("close modal");
         $("#modal-id").removeClass("active");
     });
-
-
+    
+    // create variable object to pull data from sql
     var randoGif = {
         gif_link: "",
         user_name: "",
@@ -19,7 +17,8 @@ $(document).ready(function () {
         attack: 0,
         potion: 3,
         buildPicked: "",
-        levelDone: 0
+        levelDone: 0,
+
 
     };
     console.log("base gif stats")
@@ -31,8 +30,9 @@ $(document).ready(function () {
         $("img#melon-bye").attr("src", "animated-gif");
         $("img#melon-bye").hide();
         $("#gifs").empty();
+       
         var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg-13&tag=cartoon";
-
+        console.log(queryURL)
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -94,7 +94,7 @@ $(document).ready(function () {
         createUser(randoGif);
 
         function createUser(randoGif) {
-            $.post("/api/posts/", randoGif, function () {
+            $.post("/api/newUser/", randoGif, function () {
                 window.location.href = "/game";
             });
         };
